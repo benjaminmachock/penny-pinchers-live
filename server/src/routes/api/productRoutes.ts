@@ -143,7 +143,7 @@ router.post("/seeds", async (req: Request, res: Response) => {
     ]);
     res.status(201).json(newProducts);
   } catch (error) {
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).json(error);
   }
 });
 
