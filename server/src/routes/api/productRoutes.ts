@@ -61,7 +61,7 @@ router.post("/", async (req: Request, res: Response) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
-router.post("/", async (req: Request, res: Response) => {
+router.post("/seeds", async (req: Request, res: Response) => {
   try {
     console.log(req.body);
     const newProducts = await product.bulkCreate([
